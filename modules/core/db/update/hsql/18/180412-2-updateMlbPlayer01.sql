@@ -1,0 +1,2 @@
+alter table DDCDIT_MLB_PLAYER add constraint FK_DDCDIT_MLB_PLAYER_TEAM foreign key (TEAM_ID) references DDCDIT_MLB_TEAM(ID);
+create index IDX_DDCDIT_MLB_PLAYER_TEAM on DDCDIT_MLB_PLAYER (TEAM_ID);

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<window xmlns="http://schemas.haulmont.com/cuba/window.xsd"
+        caption="msg://editorCaption"
+        class="de.diedavids.ddcdit.web.mlbplayer.MlbPlayerEdit"
+        datasource="mlbPlayerDs"
+        focusComponent="fieldGroup"
+        messagesPack="de.diedavids.ddcdit.web.mlbplayer">
+    <dsContext>
+        <datasource id="mlbPlayerDs"
+                    class="de.diedavids.ddcdit.entity.mlb.MlbPlayer"
+                    view="mlbPlayer-view"/>
+    </dsContext>
+    <dialogMode height="600"
+                width="800"/>
+    <layout expand="windowActions"
+            spacing="true">
+        <fieldGroup id="fieldGroup"
+                    datasource="mlbPlayerDs">
+            <column width="250px">
+                <field property="name"/>
+                <field property="team"/>
+                <field property="height"/>
+                <field property="weight"/>
+                <field property="age"/>
+                <field property="birthday"/>
+                <field property="leftHanded"/>
+            </column>
+        </fieldGroup>
+        <frame id="windowActions"
+               screen="editWindowActions"/>
+    </layout>
+</window>
