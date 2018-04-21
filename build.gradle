@@ -1,6 +1,6 @@
 
 buildscript {
-    ext.cubaVersion = '6.8.5'
+    ext.cubaVersion = '6.8.6'
     repositories {
         
         mavenLocal()
@@ -51,7 +51,7 @@ cuba {
 
 dependencies {
     appComponent("com.haulmont.cuba:cuba-global:$cubaVersion")
-    appComponent("de.diedavids.cuba.dataimport:dataimport-global:0.1.0-SNAPSHOT")
+    appComponent("de.diedavids.cuba.dataimport:dataimport-global:0.1.0")
 
 }
 
@@ -175,7 +175,7 @@ configure(coreModule) {
         provided(servletApi)
         jdbc(hsql)
         testRuntime(hsql)
-        compile "de.diedavids.cuba.dataimport:dataimport-core:0.1.0-SNAPSHOT"
+        compile "de.diedavids.cuba.dataimport:dataimport-core:0.1.0"
 
     }
 
