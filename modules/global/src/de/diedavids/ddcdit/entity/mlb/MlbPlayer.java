@@ -11,6 +11,7 @@ import com.haulmont.chile.core.annotations.NamePattern;
 import javax.persistence.FetchType;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
+import java.math.BigDecimal;
 
 @NamePattern("%s|name")
 @Table(name = "DDCDIT_MLB_PLAYER")
@@ -40,6 +41,18 @@ public class MlbPlayer extends StandardEntity {
 
     @Column(name = "LEFT_HANDED")
     protected Boolean leftHanded;
+
+    @Column(name = "ANNUAL_SALARY")
+    protected BigDecimal annualSalary;
+
+    public void setAnnualSalary(BigDecimal annualSalary) {
+        this.annualSalary = annualSalary;
+    }
+
+    public BigDecimal getAnnualSalary() {
+        return annualSalary;
+    }
+
 
     public void setTeam(MlbTeam team) {
         this.team = team;

@@ -1,4 +1,3 @@
-
 -- dynamic Attributes for MlbTeam
 
 insert into SYS_CATEGORY

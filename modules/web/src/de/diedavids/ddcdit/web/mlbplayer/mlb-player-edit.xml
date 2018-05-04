@@ -24,6 +24,7 @@
                 <field property="age"/>
                 <field property="birthday"/>
                 <field property="leftHanded"/>
+                <field property="annualSalary"/>
             </column>
         </fieldGroup>
         <frame id="windowActions"
