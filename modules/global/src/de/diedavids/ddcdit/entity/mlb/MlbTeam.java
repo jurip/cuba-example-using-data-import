@@ -7,6 +7,7 @@ import javax.validation.constraints.NotNull;
 import com.haulmont.cuba.core.entity.StandardEntity;
 import com.haulmont.chile.core.annotations.NamePattern;
 import javax.persistence.UniqueConstraint;
+import org.hibernate.validator.constraints.Length;
 
 @NamePattern("%s|name")
 @Table(name = "DDCDIT_MLB_TEAM", uniqueConstraints = {
@@ -16,6 +17,7 @@ import javax.persistence.UniqueConstraint;
 public class MlbTeam extends StandardEntity {
     private static final long serialVersionUID = 5386043646213520645L;
 
+    @Length(min = 1)
     @NotNull
     @Column(name = "NAME", nullable = false)
     protected String name;

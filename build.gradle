@@ -11,6 +11,9 @@ buildscript {
                 password(rootProject.hasProperty('repoPass') ? rootProject['repoPass'] : 'cuba123')
             }
         }
+        maven {
+            url  "https://dl.bintray.com/mariodavid/cuba-components"
+        }
         
     }
     dependencies {
@@ -51,7 +54,7 @@ cuba {
 
 dependencies {
     appComponent("com.haulmont.cuba:cuba-global:$cubaVersion")
-    appComponent("de.diedavids.cuba.dataimport:dataimport-global:0.1.0")
+    appComponent("de.diedavids.cuba.dataimport:dataimport-global:0.3.0-SNAPSHOT")
 
 }
 
