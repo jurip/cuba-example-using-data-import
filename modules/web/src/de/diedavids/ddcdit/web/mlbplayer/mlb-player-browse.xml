@@ -50,6 +50,8 @@
                         action="mlbPlayersTable.edit"/>
                 <button id="removeBtn"
                         action="mlbPlayersTable.remove"/>
+                <button id="removeAllBtn"
+                        action="mlbPlayersTable.removeAll"/>
             </buttonsPanel>
         </groupTable>
     </layout>
