@@ -1,4 +1,4 @@
-package de.diedavids.ddcdit.entity;
+package de.diedavids.ddcdit.entity.sales;
 
 import javax.persistence.Entity;
 import javax.persistence.Table;

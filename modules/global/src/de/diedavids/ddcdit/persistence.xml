@@ -3,8 +3,11 @@
              version="2.0">
     <persistence-unit name="cuba-component-data-import-tests"
                       transaction-type="RESOURCE_LOCAL">
-        <class>de.diedavids.ddcdit.entity.Customer</class>
+        <class>de.diedavids.ddcdit.entity.sales.Customer</class>
+        <class>de.diedavids.ddcdit.entity.sales.Order</class>
         <class>de.diedavids.ddcdit.entity.mlb.MlbPlayer</class>
         <class>de.diedavids.ddcdit.entity.mlb.MlbTeam</class>
+        <class>de.diedavids.ddcdit.entity.sales.Product</class>
+        <class>de.diedavids.ddcdit.entity.sales.ProductCategory</class>
     </persistence-unit>
 </persistence>

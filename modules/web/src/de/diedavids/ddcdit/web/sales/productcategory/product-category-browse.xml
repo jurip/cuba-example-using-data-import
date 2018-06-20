@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<window xmlns="http://schemas.haulmont.com/cuba/window.xsd"
+        caption="msg://browseCaption"
+        class="de.diedavids.ddcdit.web.sales.productcategory.ProductCategoryBrowse"
+        focusComponent="productCategoriesTable"
+        lookupComponent="productCategoriesTable"
+        messagesPack="de.diedavids.ddcdit.web.sales.productcategory">
+    <dsContext>
+        <hierarchicalDatasource id="productCategoriesDs"
+                                class="de.diedavids.ddcdit.entity.sales.ProductCategory"
+                                hierarchyProperty="parent"
+                                view="productCategory-view">
+            <query>
+                <![CDATA[select e from ddcdit$ProductCategory e]]>
+            </query>
+        </hierarchicalDatasource>
+    </dsContext>
+    <dialogMode height="600"
+                width="800"/>
+    <layout expand="productCategoriesTable"
+            spacing="true">
+        <filter id="filter"
+                applyTo="productCategoriesTable"
+                datasource="productCategoriesDs">
+            <properties include=".*"/>
+        </filter>
+        <treeTable id="productCategoriesTable"
+                   width="100%">
+            <actions>
+                <action id="create"/>
+                <action id="edit"/>
+                <action id="remove"/>
+            </actions>
+            <columns>
+                <column id="name"/>
+                <column id="code"/>
+                <column id="parent"/>
+            </columns>
+            <rows datasource="productCategoriesDs"/>
+            <rowsCount/>
+            <buttonsPanel id="buttonsPanel"
+                          alwaysVisible="true">
+                <button id="createBtn"
+                        action="productCategoriesTable.create"/>
+                <button id="editBtn"
+                        action="productCategoriesTable.edit"/>
+                <button id="removeBtn"
+                        action="productCategoriesTable.remove"/>
+            </buttonsPanel>
+        </treeTable>
+    </layout>
+</window>

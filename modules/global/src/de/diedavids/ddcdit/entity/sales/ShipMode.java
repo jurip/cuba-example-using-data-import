@@ -1,19 +1,20 @@
-package de.diedavids.ddcdit.entity;
+package de.diedavids.ddcdit.entity.sales;
 
 import com.haulmont.chile.core.datatypes.impl.EnumClass;
 
 import javax.annotation.Nullable;
 
 
-public enum CustomerPriority implements EnumClass<Integer> {
+public enum ShipMode implements EnumClass<Integer> {
 
-    LOW(10),
-    MEDIUM(20),
-    HIGH(30);
+    second_class(10),
+    standard_class(20),
+    first_class(30),
+    same_day(40);
 
     private Integer id;
 
-    CustomerPriority(Integer value) {
+    ShipMode(Integer value) {
         this.id = value;
     }
 
@@ -22,8 +23,8 @@ public enum CustomerPriority implements EnumClass<Integer> {
     }
 
     @Nullable
-    public static CustomerPriority fromId(Integer id) {
-        for (CustomerPriority at : CustomerPriority.values()) {
+    public static ShipMode fromId(Integer id) {
+        for (ShipMode at : ShipMode.values()) {
             if (at.getId().equals(id)) {
                 return at;
             }

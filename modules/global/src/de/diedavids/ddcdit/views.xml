@@ -6,4 +6,24 @@
         <property name="team"
                   view="_minimal"/>
     </view>
+    <view class="de.diedavids.ddcdit.entity.sales.Product"
+          extends="_local"
+          name="product-with-category">
+        <property name="category"
+                  view="_minimal"/>
+    </view>
+    <view class="de.diedavids.ddcdit.entity.sales.Order"
+          extends="_local"
+          name="order-view">
+        <property name="customer"
+                  view="_minimal"/>
+        <property name="product"
+                  view="_minimal"/>
+    </view>
+    <view class="de.diedavids.ddcdit.entity.sales.ProductCategory"
+          extends="_local"
+          name="productCategory-view">
+        <property name="parent"
+                  view="_minimal"/>
+    </view>
 </views>

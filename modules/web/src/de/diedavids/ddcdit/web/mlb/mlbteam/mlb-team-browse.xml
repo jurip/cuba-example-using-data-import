@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <window xmlns="http://schemas.haulmont.com/cuba/window.xsd"
         caption="msg://browseCaption"
-        class="de.diedavids.ddcdit.web.mlbteam.MlbTeamBrowse"
+        class="de.diedavids.ddcdit.web.mlb.mlbteam.MlbTeamBrowse"
         focusComponent="mlbTeamsTable"
         lookupComponent="mlbTeamsTable"
-        messagesPack="de.diedavids.ddcdit.web.mlbteam">
+        messagesPack="de.diedavids.ddcdit.web.mlb.mlbteam">
     <dsContext>
         <groupDatasource id="mlbTeamsDs"
                          class="de.diedavids.ddcdit.entity.mlb.MlbTeam"

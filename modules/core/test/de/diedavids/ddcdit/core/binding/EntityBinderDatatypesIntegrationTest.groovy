@@ -3,8 +3,9 @@ package de.diedavids.ddcdit.core.binding
 import de.diedavids.cuba.dataimport.dto.ImportData
 import de.diedavids.cuba.dataimport.entity.ImportAttributeMapper
 import de.diedavids.cuba.dataimport.entity.ImportConfiguration
-import de.diedavids.ddcdit.entity.*
 import de.diedavids.ddcdit.entity.mlb.*
+import de.diedavids.ddcdit.entity.sales.Customer
+import de.diedavids.ddcdit.entity.sales.CustomerPriority
 import org.assertj.core.api.Assertions
 import org.junit.Test
 

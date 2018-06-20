@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <window xmlns="http://schemas.haulmont.com/cuba/window.xsd"
         caption="msg://editorCaption"
-        class="de.diedavids.ddcdit.web.mlbplayer.MlbPlayerEdit"
+        class="de.diedavids.ddcdit.web.mlb.mlbplayer.MlbPlayerEdit"
         datasource="mlbPlayerDs"
         focusComponent="fieldGroup"
-        messagesPack="de.diedavids.ddcdit.web.mlbplayer">
+        messagesPack="de.diedavids.ddcdit.web.mlb.mlbplayer">
     <dsContext>
         <datasource id="mlbPlayerDs"
                     class="de.diedavids.ddcdit.entity.mlb.MlbPlayer"

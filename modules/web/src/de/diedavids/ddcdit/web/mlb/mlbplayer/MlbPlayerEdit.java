@@ -1,4 +1,4 @@
-package de.diedavids.ddcdit.web.mlbplayer;
+package de.diedavids.ddcdit.web.mlb.mlbplayer;
 
 import com.haulmont.cuba.gui.components.AbstractEditor;
 import de.diedavids.ddcdit.entity.mlb.MlbPlayer;

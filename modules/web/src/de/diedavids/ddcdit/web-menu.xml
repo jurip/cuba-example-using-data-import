@@ -2,9 +2,15 @@
 <menu-config xmlns="http://schemas.haulmont.com/cuba/menu.xsd">
     <menu id="application-ddcdit"
           insertBefore="administration">
-        <item screen="ddcdit$MlbPlayer.browse"/>
-        <item screen="ddcdit$MlbTeam.browse"/>
-        <separator/>
-        <item screen="ddcdit$Customer.browse"/>
+        <menu id="mlb-example">
+            <item screen="ddcdit$MlbPlayer.browse"/>
+            <item screen="ddcdit$MlbTeam.browse"/>
+        </menu>
+        <menu id="sales-example">
+            <item screen="ddcdit$Order.browse"/>
+            <item screen="ddcdit$Customer.browse"/>
+            <item screen="ddcdit$Product.browse"/>
+            <item screen="ddcdit$ProductCategory.browse"/>
+        </menu>
     </menu>
 </menu-config>

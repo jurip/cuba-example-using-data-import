@@ -1,25 +1,25 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <window xmlns="http://schemas.haulmont.com/cuba/window.xsd"
         caption="msg://editorCaption"
-        class="de.diedavids.ddcdit.web.mlbteam.MlbTeamEdit"
-        datasource="mlbTeamDs"
+        class="de.diedavids.ddcdit.web.sales.product.ProductEdit"
+        datasource="productDs"
         focusComponent="fieldGroup"
-        messagesPack="de.diedavids.ddcdit.web.mlbteam">
+        messagesPack="de.diedavids.ddcdit.web.sales.product">
     <dsContext>
-        <datasource id="mlbTeamDs"
-                    class="de.diedavids.ddcdit.entity.mlb.MlbTeam"
-                    view="_local"/>
+        <datasource id="productDs"
+                    class="de.diedavids.ddcdit.entity.sales.Product"
+                    view="product-with-category"/>
     </dsContext>
     <dialogMode height="600"
                 width="800"/>
     <layout expand="windowActions"
             spacing="true">
         <fieldGroup id="fieldGroup"
-                    datasource="mlbTeamDs">
+                    datasource="productDs">
             <column width="250px">
+                <field property="productId"/>
                 <field property="name"/>
-                <field property="state"/>
-                <field property="code"/>
+                <field property="category"/>
             </column>
         </fieldGroup>
         <frame id="windowActions"
