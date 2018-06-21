@@ -45,6 +45,8 @@
                         action="productsTable.edit"/>
                 <button id="removeBtn"
                         action="productsTable.remove"/>
+                <button id="removeAllBtn"
+                        action="productsTable.removeAll"/>
             </buttonsPanel>
         </groupTable>
     </layout>

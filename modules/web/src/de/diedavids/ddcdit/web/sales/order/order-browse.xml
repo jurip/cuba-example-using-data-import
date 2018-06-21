@@ -51,6 +51,8 @@
                         action="ordersTable.edit"/>
                 <button id="removeBtn"
                         action="ordersTable.remove"/>
+                <button id="removeAllBtn"
+                        action="ordersTable.removeAll"/>
             </buttonsPanel>
         </groupTable>
     </layout>

@@ -34,7 +34,6 @@
             <columns>
                 <column id="name"/>
                 <column id="code"/>
-                <column id="parent"/>
             </columns>
             <rows datasource="productCategoriesDs"/>
             <rowsCount/>
@@ -46,6 +45,8 @@
                         action="productCategoriesTable.edit"/>
                 <button id="removeBtn"
                         action="productCategoriesTable.remove"/>
+                <button id="removeAllBtn"
+                        action="productCategoriesTable.removeAll"/>
             </buttonsPanel>
         </treeTable>
     </layout>

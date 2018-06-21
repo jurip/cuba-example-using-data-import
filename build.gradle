@@ -1,6 +1,6 @@
 
 buildscript {
-    ext.cubaVersion = '6.8.8'
+    ext.cubaVersion = '6.9.1'
     repositories {
         
         mavenLocal()
@@ -36,7 +36,7 @@ def coreModule = project(":${modulePrefix}-core")
 def guiModule = project(":${modulePrefix}-gui")
 def webModule = project(":${modulePrefix}-web")
 
-def servletApi = 'org.apache.tomcat:tomcat-servlet-api:8.0.26'
+def servletApi = 'javax.servlet:javax.servlet-api:3.1.0'
 
 
 apply(plugin: 'idea')
@@ -58,7 +58,7 @@ cuba {
 
 dependencies {
     appComponent("com.haulmont.cuba:cuba-global:$cubaVersion")
-    appComponent("de.diedavids.cuba.dataimport:dataimport-global:0.4.0-SNAPSHOT")
+    appComponent("de.diedavids.cuba.dataimport:dataimport-global:0.5.0-SNAPSHOT")
 
 }
 
