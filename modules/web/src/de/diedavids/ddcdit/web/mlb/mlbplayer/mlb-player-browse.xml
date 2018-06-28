@@ -39,6 +39,7 @@
                 <column id="birthday"/>
                 <column id="leftHanded"/>
                 <column id="annualSalary"/>
+                <column id="strengths" />
             </columns>
             <rows datasource="mlbPlayersDs"/>
             <rowsCount/>

@@ -45,6 +45,8 @@
                         action="baseballStrengthsTable.edit"/>
                 <button id="removeBtn"
                         action="baseballStrengthsTable.remove"/>
+                <button id="removeAllBtn"
+                        action="baseballStrengthsTable.removeAll"/>
             </buttonsPanel>
         </groupTable>
     </layout>
