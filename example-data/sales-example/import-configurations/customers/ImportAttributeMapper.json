@@ -1,0 +1,93 @@
+[
+  {
+    "_entityName": "ddcdi$ImportAttributeMapper",
+    "id": "3a9c6546-997a-cac1-e707-9dc4d9976227",
+    "fileColumnAlias": "customer name",
+    "updatedBy": "admin",
+    "configuration": {
+      "_entityName": "ddcdi$ImportConfiguration",
+      "id": "6d2dc27a-f00c-9b86-722a-3edffce50453",
+      "version": 6,
+      "name": "Customers"
+    },
+    "version": 2,
+    "fileColumnNumber": 1,
+    "mapperMode": "CUSTOM",
+    "entityAttribute": "name",
+    "createdBy": "admin",
+    "customAttributeBindScript": "return rawValue.split(\" \").drop(1).join(\" \")",
+    "createTs": "2018-06-21 09:08:36.122",
+    "updateTs": "2018-06-21 09:09:26.489"
+  },
+  {
+    "_entityName": "ddcdi$ImportAttributeMapper",
+    "id": "744144fb-cdc9-db20-367f-a2ef6da21345",
+    "fileColumnAlias": "customer name",
+    "configuration": {
+      "_entityName": "ddcdi$ImportConfiguration",
+      "id": "6d2dc27a-f00c-9b86-722a-3edffce50453"
+    },
+    "version": 1,
+    "fileColumnNumber": 1,
+    "mapperMode": "CUSTOM",
+    "entityAttribute": "documentNumber",
+    "createdBy": "admin",
+    "customAttributeBindScript": "def generator \u003d { String alphabet, int n -\u003e\n  new Random().with {\n    (1..n).collect { alphabet[ nextInt( alphabet.length() ) ] }.join()\n  }\n}\n\nreturn generator( (\u0027A\u0027..\u0027Z\u0027).join(), 9 )",
+    "createTs": "2018-06-21 12:13:58.426",
+    "updateTs": "2018-06-21 12:13:58.426"
+  },
+  {
+    "_entityName": "ddcdi$ImportAttributeMapper",
+    "id": "b4bbc81f-c679-2145-9853-0d732d8c4bba",
+    "fileColumnAlias": "segment",
+    "updatedBy": "admin",
+    "configuration": {
+      "_entityName": "ddcdi$ImportConfiguration",
+      "id": "6d2dc27a-f00c-9b86-722a-3edffce50453"
+    },
+    "version": 2,
+    "fileColumnNumber": 2,
+    "mapperMode": "CUSTOM",
+    "entityAttribute": "priority",
+    "createdBy": "admin",
+    "customAttributeBindScript": "import de.diedavids.ddcdit.entity.sales.CustomerPriority\nswitch (rawValue) {\n    case \u0027Consumer\u0027: return CustomerPriority.LOW\n    case \u0027Home Office\u0027: return CustomerPriority.MEDIUM\n    case \u0027Corporate\u0027: return CustomerPriority.HIGH\n}",
+    "createTs": "2018-06-21 09:08:36.122",
+    "updateTs": "2018-06-21 09:09:36.662"
+  },
+  {
+    "_entityName": "ddcdi$ImportAttributeMapper",
+    "id": "ba12be2f-b7ff-2f43-291d-e52833e585bc",
+    "fileColumnAlias": "city",
+    "updatedBy": "admin",
+    "configuration": {
+      "_entityName": "ddcdi$ImportConfiguration",
+      "id": "6d2dc27a-f00c-9b86-722a-3edffce50453"
+    },
+    "version": 3,
+    "fileColumnNumber": 4,
+    "mapperMode": "CUSTOM",
+    "entityAttribute": "description",
+    "createdBy": "admin",
+    "customAttributeBindScript": "return dataRow[\u0027customer id\u0027] + \": \" + \n  dataRow[\u0027city\u0027] + \" \" + \n  dataRow[\u0027state\u0027] + \", \" + \n  dataRow[\u0027country\u0027] + \" - \" + \n  dataRow[\u0027region\u0027]",
+    "createTs": "2018-06-21 09:08:36.122",
+    "updateTs": "2018-06-21 12:16:27.355"
+  },
+  {
+    "_entityName": "ddcdi$ImportAttributeMapper",
+    "id": "f2bbf4ff-4dc5-57da-0869-a4265c29857c",
+    "fileColumnAlias": "customer name",
+    "updatedBy": "admin",
+    "configuration": {
+      "_entityName": "ddcdi$ImportConfiguration",
+      "id": "6d2dc27a-f00c-9b86-722a-3edffce50453"
+    },
+    "version": 2,
+    "fileColumnNumber": 1,
+    "mapperMode": "CUSTOM",
+    "entityAttribute": "firstName",
+    "createdBy": "admin",
+    "customAttributeBindScript": "return rawValue.split(\" \")[0]",
+    "createTs": "2018-06-21 09:08:36.122",
+    "updateTs": "2018-06-21 09:09:26.489"
+  }
+]

@@ -5,6 +5,8 @@
           name="mlbPlayer-view">
         <property name="team"
                   view="_minimal"/>
+        <property name="strengths"
+                  view="_local"/>
     </view>
     <view class="de.diedavids.ddcdit.entity.sales.Product"
           extends="_local"
@@ -24,6 +26,12 @@
           extends="_local"
           name="productCategory-view">
         <property name="parent"
+                  view="_minimal"/>
+    </view>
+    <view class="de.diedavids.ddcdit.entity.mlb.BaseballStrength"
+          extends="_local"
+          name="baseballStrength-view">
+        <property name="players"
                   view="_minimal"/>
     </view>
 </views>

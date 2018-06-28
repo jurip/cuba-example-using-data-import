@@ -1,0 +1,1 @@
+create unique index IDX_DDCDIT_MLB_TEAM_UNQ on DDCDIT_MLB_TEAM (CODE, DELETE_TS) ;

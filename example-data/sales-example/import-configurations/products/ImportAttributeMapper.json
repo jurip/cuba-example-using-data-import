@@ -1,0 +1,58 @@
+[
+  {
+    "_entityName": "ddcdi$ImportAttributeMapper",
+    "id": "411716c4-90a8-4512-0892-49ce89155e7e",
+    "fileColumnAlias": "category",
+    "associationLookupAttribute": "name",
+    "updatedBy": "admin",
+    "configuration": {
+      "_entityName": "ddcdi$ImportConfiguration",
+      "id": "59309bb9-1724-7c1f-0661-42bb1b5bb014",
+      "version": 2,
+      "name": "Product"
+    },
+    "version": 2,
+    "fileColumnNumber": 1,
+    "mapperMode": "AUTOMATIC",
+    "entityAttribute": "category",
+    "createdBy": "admin",
+    "attributeType": "ASSOCIATION_ATTRIBUTE",
+    "createTs": "2018-06-21 12:54:54.902",
+    "updateTs": "2018-06-21 12:55:42.524"
+  },
+  {
+    "_entityName": "ddcdi$ImportAttributeMapper",
+    "id": "6610d3ec-3e83-2b91-1fbd-1b2cb3df835b",
+    "fileColumnAlias": "product name",
+    "configuration": {
+      "_entityName": "ddcdi$ImportConfiguration",
+      "id": "59309bb9-1724-7c1f-0661-42bb1b5bb014"
+    },
+    "version": 1,
+    "fileColumnNumber": 3,
+    "mapperMode": "AUTOMATIC",
+    "entityAttribute": "name",
+    "createdBy": "admin",
+    "attributeType": "DIRECT_ATTRIBUTE",
+    "createTs": "2018-06-21 12:54:54.902",
+    "updateTs": "2018-06-21 12:54:54.902"
+  },
+  {
+    "_entityName": "ddcdi$ImportAttributeMapper",
+    "id": "ddda931c-790b-4a67-62c1-94819cf3e60e",
+    "fileColumnAlias": "product id",
+    "updatedBy": "admin",
+    "configuration": {
+      "_entityName": "ddcdi$ImportConfiguration",
+      "id": "59309bb9-1724-7c1f-0661-42bb1b5bb014"
+    },
+    "version": 2,
+    "fileColumnNumber": 0,
+    "mapperMode": "AUTOMATIC",
+    "entityAttribute": "productId",
+    "createdBy": "admin",
+    "attributeType": "DIRECT_ATTRIBUTE",
+    "createTs": "2018-06-21 12:54:54.902",
+    "updateTs": "2018-06-21 12:55:42.524"
+  }
+]

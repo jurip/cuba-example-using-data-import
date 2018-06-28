@@ -17,7 +17,7 @@ public class Product extends StandardEntity {
     private static final long serialVersionUID = 6590520188494047540L;
 
     @NotNull
-    @Column(name = "PRODUCT_ID", nullable = false)
+    @Column(name = "PRODUCT_ID", nullable = false, unique = true)
     protected String productId;
 
     @NotNull

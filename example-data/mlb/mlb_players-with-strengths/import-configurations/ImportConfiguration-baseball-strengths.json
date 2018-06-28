@@ -1,0 +1,17 @@
+[
+  {
+    "_entityName": "ddcdi$ImportConfiguration",
+    "id": "f109ce70-4f5f-d34c-b0fc-143c6514ac63",
+    "transactionStrategy": "SINGLE_TRANSACTION",
+    "updatedBy": "admin",
+    "entityClass": "ddcdit$BaseballStrength",
+    "dateFormat": "dd/MM/yyyy",
+    "booleanFalseValue": "False",
+    "version": 2,
+    "createdBy": "admin",
+    "booleanTrueValue": "True",
+    "name": "Basebasell Strengths",
+    "createTs": "2018-06-27 08:07:56.305",
+    "updateTs": "2018-06-28 09:34:27.054"
+  }
+]

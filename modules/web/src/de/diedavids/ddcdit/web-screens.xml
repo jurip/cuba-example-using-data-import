@@ -25,4 +25,8 @@
             template="de/diedavids/ddcdit/web/sales/order/order-browse.xml"/>
     <screen id="ddcdit$Order.edit"
             template="de/diedavids/ddcdit/web/sales/order/order-edit.xml"/>
+    <screen id="ddcdit$BaseballStrength.browse"
+            template="de/diedavids/ddcdit/web/mlb/baseballstrength/baseball-strength-browse.xml"/>
+    <screen id="ddcdit$BaseballStrength.edit"
+            template="de/diedavids/ddcdit/web/mlb/baseballstrength/baseball-strength-edit.xml"/>
 </screen-config>

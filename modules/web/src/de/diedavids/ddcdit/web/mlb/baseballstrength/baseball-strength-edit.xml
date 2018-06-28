@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<window xmlns="http://schemas.haulmont.com/cuba/window.xsd"
+        caption="msg://editorCaption"
+        class="de.diedavids.ddcdit.web.mlb.baseballstrength.BaseballStrengthEdit"
+        datasource="baseballStrengthDs"
+        focusComponent="fieldGroup"
+        messagesPack="de.diedavids.ddcdit.web.mlb.baseballstrength">
+    <dsContext>
+        <datasource id="baseballStrengthDs"
+                    class="de.diedavids.ddcdit.entity.mlb.BaseballStrength"
+                    view="baseballStrength-view">
+            <collectionDatasource id="playersDs"
+                                  property="players"/>
+        </datasource>
+    </dsContext>
+    <dialogMode height="600"
+                width="800"/>
+    <layout expand="windowActions"
+            spacing="true">
+        <fieldGroup id="fieldGroup"
+                    datasource="baseballStrengthDs">
+            <column width="250px">
+                <field property="name"/>
+                <field property="code"/>
+                <field property="score"/>
+            </column>
+        </fieldGroup>
+        <groupBox id="playersBox"
+                  caption="msg://de.diedavids.ddcdit.entity.mlb/BaseballStrength.players">
+            <table id="playersTable"
+                   height="200px"
+                   width="100%">
+                <actions>
+                    <action id="add"/>
+                    <action id="remove"/>
+                </actions>
+                <columns>
+                    <column id="name"/>
+                </columns>
+                <rows datasource="playersDs"/>
+                <buttonsPanel>
+                    <button action="playersTable.add"/>
+                    <button action="playersTable.remove"/>
+                </buttonsPanel>
+            </table>
+        </groupBox>
+        <frame id="windowActions"
+               screen="editWindowActions"/>
+    </layout>
+</window>

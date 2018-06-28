@@ -18,6 +18,30 @@ create table DDCDIT_CUSTOMER (
     primary key (ID)
 )^
 -- end DDCDIT_CUSTOMER
+-- begin DDCDIT_ORDER
+create table DDCDIT_ORDER (
+    ID varchar(36) not null,
+    VERSION integer not null,
+    CREATE_TS timestamp,
+    CREATED_BY varchar(50),
+    UPDATE_TS timestamp,
+    UPDATED_BY varchar(50),
+    DELETE_TS timestamp,
+    DELETED_BY varchar(50),
+    --
+    ORDER_ID varchar(255) not null,
+    ORDER_DATE date not null,
+    SHIPPING_DATE date,
+    SHIPPING_MODE integer,
+    CUSTOMER_ID varchar(36) not null,
+    PRODUCT_ID varchar(36) not null,
+    PRICE decimal(19, 2),
+    QUANTITY double precision,
+    TOTAL_PRICE decimal(19, 2),
+    --
+    primary key (ID)
+)^
+-- end DDCDIT_ORDER
 -- begin DDCDIT_MLB_PLAYER
 create table DDCDIT_MLB_PLAYER (
     ID varchar(36) not null,
@@ -59,30 +83,6 @@ create table DDCDIT_MLB_TEAM (
     primary key (ID)
 )^
 -- end DDCDIT_MLB_TEAM
--- begin DDCDIT_ORDER
-create table DDCDIT_ORDER (
-    ID varchar(36) not null,
-    VERSION integer not null,
-    CREATE_TS timestamp,
-    CREATED_BY varchar(50),
-    UPDATE_TS timestamp,
-    UPDATED_BY varchar(50),
-    DELETE_TS timestamp,
-    DELETED_BY varchar(50),
-    --
-    ORDER_ID varchar(255) not null,
-    ORDER_DATE date not null,
-    SHIPPING_DATE date,
-    SHIPPING_MODE integer,
-    CUSTOMER_ID varchar(36) not null,
-    PRODUCT_ID varchar(36) not null,
-    PRICE decimal(19, 2),
-    QUANTITY double precision,
-    TOTAL_PRICE decimal(19, 2),
-    --
-    primary key (ID)
-)^
--- end DDCDIT_ORDER
 -- begin DDCDIT_PRODUCT
 create table DDCDIT_PRODUCT (
     ID varchar(36) not null,
@@ -119,3 +119,28 @@ create table DDCDIT_PRODUCT_CATEGORY (
     primary key (ID)
 )^
 -- end DDCDIT_PRODUCT_CATEGORY
+-- begin DDCDIT_BASEBALL_STRENGTH
+create table DDCDIT_BASEBALL_STRENGTH (
+    ID varchar(36) not null,
+    VERSION integer not null,
+    CREATE_TS timestamp,
+    CREATED_BY varchar(50),
+    UPDATE_TS timestamp,
+    UPDATED_BY varchar(50),
+    DELETE_TS timestamp,
+    DELETED_BY varchar(50),
+    --
+    NAME varchar(255) not null,
+    CODE varchar(255) not null,
+    SCORE integer not null,
+    --
+    primary key (ID)
+)^
+-- end DDCDIT_BASEBALL_STRENGTH
+-- begin DDCDIT_MLB_PLAYER_BASEBALL_STRENGTH_LINK
+create table DDCDIT_MLB_PLAYER_BASEBALL_STRENGTH_LINK (
+    BASEBALL_STRENGTH_ID varchar(36) not null,
+    MLB_PLAYER_ID varchar(36) not null,
+    primary key (BASEBALL_STRENGTH_ID, MLB_PLAYER_ID)
+)^
+-- end DDCDIT_MLB_PLAYER_BASEBALL_STRENGTH_LINK

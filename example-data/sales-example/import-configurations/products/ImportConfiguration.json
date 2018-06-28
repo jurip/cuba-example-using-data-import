@@ -1,0 +1,25 @@
+[
+  {
+    "_entityName": "ddcdi$ImportConfiguration",
+    "id": "59309bb9-1724-7c1f-0661-42bb1b5bb014",
+    "transactionStrategy": "SINGLE_TRANSACTION",
+    "template": {
+      "_entityName": "sys$FileDescriptor",
+      "id": "039b7afc-dd54-c018-7699-39eb5831b447",
+      "extension": "xlsx",
+      "name": "products.xlsx",
+      "version": 1,
+      "createDate": "2018-06-21 12:54:50.020"
+    },
+    "updatedBy": "admin",
+    "entityClass": "ddcdit$Product",
+    "dateFormat": "dd/MM/yyyy",
+    "booleanFalseValue": "False",
+    "version": 2,
+    "createdBy": "admin",
+    "booleanTrueValue": "True",
+    "name": "Product",
+    "createTs": "2018-06-21 12:54:54.902",
+    "updateTs": "2018-06-21 12:55:42.524"
+  }
+]

@@ -9,5 +9,6 @@
         <class>de.diedavids.ddcdit.entity.mlb.MlbTeam</class>
         <class>de.diedavids.ddcdit.entity.sales.Product</class>
         <class>de.diedavids.ddcdit.entity.sales.ProductCategory</class>
+        <class>de.diedavids.ddcdit.entity.mlb.BaseballStrength</class>
     </persistence-unit>
 </persistence>

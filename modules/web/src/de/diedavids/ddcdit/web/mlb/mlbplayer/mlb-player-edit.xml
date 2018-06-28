@@ -8,7 +8,10 @@
     <dsContext>
         <datasource id="mlbPlayerDs"
                     class="de.diedavids.ddcdit.entity.mlb.MlbPlayer"
-                    view="mlbPlayer-view"/>
+                    view="mlbPlayer-view">
+            <collectionDatasource id="strengthsDs"
+                                  property="strengths"/>
+        </datasource>
     </dsContext>
     <dialogMode height="600"
                 width="800"/>
@@ -27,6 +30,27 @@
                 <field property="annualSalary"/>
             </column>
         </fieldGroup>
+        <groupBox id="strengthsBox"
+                  caption="msg://de.diedavids.ddcdit.entity.mlb/MlbPlayer.strengths">
+            <table id="strengthsTable"
+                   height="200px"
+                   width="100%">
+                <actions>
+                    <action id="add"/>
+                    <action id="remove"/>
+                </actions>
+                <columns>
+                    <column id="name"/>
+                    <column id="code"/>
+                    <column id="score"/>
+                </columns>
+                <rows datasource="strengthsDs"/>
+                <buttonsPanel>
+                    <button action="strengthsTable.add"/>
+                    <button action="strengthsTable.remove"/>
+                </buttonsPanel>
+            </table>
+        </groupBox>
         <frame id="windowActions"
                screen="editWindowActions"/>
     </layout>

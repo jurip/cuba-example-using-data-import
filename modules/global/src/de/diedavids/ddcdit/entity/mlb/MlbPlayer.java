@@ -12,6 +12,9 @@ import javax.persistence.FetchType;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import java.math.BigDecimal;
+import java.util.List;
+import javax.persistence.JoinTable;
+import javax.persistence.ManyToMany;
 
 @NamePattern("%s|name")
 @Table(name = "DDCDIT_MLB_PLAYER")
@@ -44,6 +47,21 @@ public class MlbPlayer extends StandardEntity {
 
     @Column(name = "ANNUAL_SALARY")
     protected BigDecimal annualSalary;
+
+    @JoinTable(name = "DDCDIT_MLB_PLAYER_BASEBALL_STRENGTH_LINK",
+        joinColumns = @JoinColumn(name = "MLB_PLAYER_ID"),
+        inverseJoinColumns = @JoinColumn(name = "BASEBALL_STRENGTH_ID"))
+    @ManyToMany
+    protected List<BaseballStrength> strengths;
+
+    public void setStrengths(List<BaseballStrength> strengths) {
+        this.strengths = strengths;
+    }
+
+    public List<BaseballStrength> getStrengths() {
+        return strengths;
+    }
+
 
     public void setAnnualSalary(BigDecimal annualSalary) {
         this.annualSalary = annualSalary;

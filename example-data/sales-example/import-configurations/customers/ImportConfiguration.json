@@ -1,0 +1,25 @@
+[
+  {
+    "_entityName": "ddcdi$ImportConfiguration",
+    "id": "6d2dc27a-f00c-9b86-722a-3edffce50453",
+    "transactionStrategy": "SINGLE_TRANSACTION",
+    "template": {
+      "_entityName": "sys$FileDescriptor",
+      "id": "0dee2d23-66b2-d4cc-c0a7-12d5f0bd5a25",
+      "extension": "xlsx",
+      "name": "customers.xlsx",
+      "version": 1,
+      "createDate": "2018-06-21 08:55:13.606"
+    },
+    "updatedBy": "admin",
+    "entityClass": "ddcdit$Customer",
+    "dateFormat": "dd/MM/yyyy",
+    "booleanFalseValue": "False",
+    "version": 6,
+    "createdBy": "admin",
+    "booleanTrueValue": "True",
+    "name": "Customers",
+    "createTs": "2018-06-21 08:55:18.169",
+    "updateTs": "2018-06-21 12:16:27.355"
+  }
+]
