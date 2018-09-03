@@ -1,30 +1,30 @@
-"Code","Name","State"
-ALT,"Altoona Mountain City",OK
-ANA,"Los Angeles Angels of Anaheim",WA
-CAL,"California Angels",OH
-LAA,"Los Angeles Angels",OK
-ARI,"Arizona Diamondbacks",WA
-ATH,"Philadelphia Athletics",WA
-ATL,"Atlanta Braves",OH
-BSN,"Boston Braves",WA
-MLN,"Milwaukee Braves",OH
-BAL,"Baltimore Orioles",OK
-MLA,"Milwaukee Brewers",OH
-SLB,"St. Louis Browns",OK
-BLN,"Baltimore Orioles",TX
-BLU,"Baltimore Monumentals",PA
-BRA,"Brooklyn Atlantics",TX
-BRG,"Brooklyn Gladiators",PA
-BOS,"Boston Reds",NC
-BTT,"Brooklyn Tip-Tops",WA
-BUF,"Buffalo Bisons",TX
-BWW,"Brooklyn Ward's Wonders",PA
-CLV,"Cleveland Blues",PA
-CEN,"Philadelphia Centennials",TX
-CHC,"Chicago Cubs",NC
-CHI,"Chicago Pirates",TX
-CHW,"Chicago White Sox",WA
-CIN,"Cincinnati Reds",WA
-CKK,"Cincinnati Kelly's Killers",PA
-CLE,"Cleveland Indians",HI
-COL,"Columbus Solons",WA
+"Code","Name","State", "Telephone"
+ALT,"Altoona Mountain City",OK, "4357567"
+ANA,"Los Angeles Angels of Anaheim",WA, "9082023"
+CAL,"California Angels",OH, "1236576"
+LAA,"Los Angeles Angels",OK, "24354675"
+ARI,"Arizona Diamondbacks",WA, "3425757"
+ATH,"Philadelphia Athletics",WA, "2346767"
+ATL,"Atlanta Braves",OH, "35345234"
+BSN,"Boston Braves",WA, "567567"
+MLN,"Milwaukee Braves",OH, "34253467"
+BAL,"Baltimore Orioles",OK, "2342357785"
+MLA,"Milwaukee Brewers",OH, "786784535"
+SLB,"St. Louis Browns",OK, "2342347896"
+BLN,"Baltimore Orioles",TX, "243256"
+BLU,"Baltimore Monumentals",PA, "689689"
+BRA,"Brooklyn Atlantics",TX, "709789"
+BRG,"Brooklyn Gladiators",PA, "787868"
+BOS,"Boston Reds",NC, "456978"
+BTT,"Brooklyn Tip-Tops",WA, "5678669"
+BUF,"Buffalo Bisons",TX, "23459789789"
+BWW,"Brooklyn Ward's Wonders",PA, "4568989"
+CLV,"Cleveland Blues",PA, "42467578"
+CEN,"Philadelphia Centennials",TX, "6866345"
+CHC,"Chicago Cubs",NC, "674424"
+CHI,"Chicago Pirates",TX, "67869798"
+CHW,"Chicago White Sox",WA, "6784545"
+CIN,"Cincinnati Reds",WA, "6780098"
+CKK,"Cincinnati Kelly's Killers",PA, "34536757"
+CLE,"Cleveland Indians",HI, "3456676"
+COL,"Columbus Solons",WA, "6786734"
