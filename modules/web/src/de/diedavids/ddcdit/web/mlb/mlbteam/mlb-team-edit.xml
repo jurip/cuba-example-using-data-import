@@ -20,6 +20,7 @@
                 <field property="name"/>
                 <field property="state"/>
                 <field property="code"/>
+                <field property="telephone"/>
             </column>
         </fieldGroup>
         <frame id="windowActions"
