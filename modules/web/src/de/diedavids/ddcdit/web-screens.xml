@@ -9,10 +9,7 @@
             template="/de/diedavids/ddcdit/web/mlb/mlbteam/mlb-team-browse.xml"/>
     <screen id="ddcdit$MlbTeam.edit"
             template="/de/diedavids/ddcdit/web/mlb/mlbteam/mlb-team-edit.xml"/>
-    <screen id="ddcdit$Customer.browse"
-            template="/de/diedavids/ddcdit/web/sales/customer/customer-browse.xml"/>
-    <screen id="ddcdit$Customer.edit"
-            template="/de/diedavids/ddcdit/web/sales/customer/customer-edit.xml"/>
+
     <screen id="ddcdit$Product.browse"
             template="de/diedavids/ddcdit/web/sales/product/product-browse.xml"/>
     <screen id="ddcdit$Product.edit"

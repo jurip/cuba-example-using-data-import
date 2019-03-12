@@ -4,12 +4,12 @@ import com.haulmont.cuba.gui.components.Button
 import com.haulmont.cuba.gui.components.TreeTable
 import de.diedavids.cuba.dataimport.web.WithImport
 import de.diedavids.ddcdit.entity.sales.ProductCategory
-import de.diedavids.ddcdit.web.RemoveAllLookup
+import de.diedavids.ddcdit.web.RemoveAllAbstractLookup
 
 import javax.inject.Inject
 
 @WithImport(listComponent = "productCategoriesTable")
-class ProductCategoryBrowse extends RemoveAllLookup {
+class ProductCategoryBrowse extends RemoveAllAbstractLookup {
 
 
     @Inject

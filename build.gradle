@@ -1,6 +1,6 @@
 
 buildscript {
-    ext.cubaVersion = '6.10.2'
+    ext.cubaVersion = '7.0.1'
     repositories {
         
         mavenLocal()
@@ -10,13 +10,6 @@ buildscript {
                 username(rootProject.hasProperty('repoUser') ? rootProject['repoUser'] : 'cuba')
                 password(rootProject.hasProperty('repoPass') ? rootProject['repoPass'] : 'cuba123')
             }
-        }
-        maven {
-            url  "https://dl.bintray.com/mariodavid/cuba-components"
-        }
-
-        maven {
-            url  "https://dl.bintray.com/balvi/cuba-components"
         }
         
     }
@@ -39,7 +32,6 @@ def webModule = project(":${modulePrefix}-web")
 def servletApi = 'javax.servlet:javax.servlet-api:3.1.0'
 
 
-apply(plugin: 'idea')
 apply(plugin: 'cuba')
 
 cuba {
@@ -58,8 +50,8 @@ cuba {
 
 dependencies {
     appComponent("com.haulmont.cuba:cuba-global:$cubaVersion")
-    appComponent("de.balvi.cuba.declarativecontrollers:declarativecontrollers-global:0.7.0")
-    appComponent("de.diedavids.cuba.dataimport:dataimport-global:0.7.0")
+    appComponent("de.balvi.cuba.declarativecontrollers:declarativecontrollers-global:0.8.0")
+    appComponent("de.diedavids.cuba.dataimport:dataimport-global:0.8.0-SNAPSHOT")
 
 }
 
@@ -102,7 +94,6 @@ test.finalizedBy(project.tasks.coberturaCheck)
 configure([globalModule, coreModule, guiModule, webModule]) {
     apply(plugin: 'java')
     apply(plugin: 'maven')
-    apply(plugin: 'idea')
     apply(plugin: 'cuba')
 
     dependencies {
@@ -166,6 +157,12 @@ configure([globalModule, coreModule, guiModule, webModule]) {
 }
 
 configure(globalModule) {
+    dependencies {
+        if (!JavaVersion.current().isJava8()) {
+            runtime('javax.xml.bind:jaxb-api:2.3.1')
+            runtime('org.glassfish.jaxb:jaxb-runtime:2.3.1')
+        }
+    }
     entitiesEnhancing {
         main { enabled = true }
     }
@@ -182,7 +179,7 @@ configure(coreModule) {
 
     dependencies {
         compile(globalModule)
-        provided(servletApi)
+        compileOnly(servletApi)
         jdbc(hsql)
         testRuntime(hsql)
         compile "de.diedavids.cuba.dataimport:dataimport-core:0.1.0"
@@ -241,7 +238,7 @@ configure(webModule) {
     }
 
     dependencies {
-        provided(servletApi)
+        compileOnly(servletApi)
         compile(guiModule)
 
     }
@@ -305,9 +302,6 @@ task restart(dependsOn: ['stop', ":${modulePrefix}-core:deploy", ":${modulePrefi
     }
 }
 
-task wrapper(type: Wrapper) {
-    gradleVersion = '4.3.1'
-}
 
 apply from: 'extra.gradle'
 

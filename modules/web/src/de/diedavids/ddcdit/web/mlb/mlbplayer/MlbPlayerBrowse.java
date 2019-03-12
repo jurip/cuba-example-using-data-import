@@ -2,18 +2,15 @@ package de.diedavids.ddcdit.web.mlb.mlbplayer;
 
 import com.haulmont.cuba.gui.components.Button;
 import com.haulmont.cuba.gui.components.GroupTable;
-import com.haulmont.cuba.gui.components.Table;
-import de.balvi.cuba.declarativecontrollers.web.browse.AnnotatableAbstractLookup;
 import de.diedavids.cuba.dataimport.web.WithImport;
 import de.diedavids.ddcdit.entity.mlb.MlbPlayer;
-import de.diedavids.ddcdit.web.RemoveAllAction;
-import de.diedavids.ddcdit.web.RemoveAllLookup;
+import de.diedavids.ddcdit.web.RemoveAllAbstractLookup;
 
 import javax.inject.Inject;
 import java.util.Map;
 
 @WithImport(listComponent = "mlbPlayersTable")
-public class MlbPlayerBrowse extends RemoveAllLookup {
+public class MlbPlayerBrowse extends RemoveAllAbstractLookup {
 
 
     @Inject
