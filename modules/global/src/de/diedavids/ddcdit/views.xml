@@ -34,4 +34,8 @@
         <property name="players"
                   view="_minimal"/>
     </view>
+    <view entity="ddcdit_MlbPlayerSponsor" name="mlbPlayerSponsor-view" extends="_base">
+        <property name="sponsoredPlayersFile" view="_minimal"/>
+        <property name="sponsoredPlayers" view="_base"/>
+    </view>
 </views>

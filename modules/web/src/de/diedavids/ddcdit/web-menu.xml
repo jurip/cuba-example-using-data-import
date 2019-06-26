@@ -6,6 +6,7 @@
             <item screen="ddcdit$MlbPlayer.browse"/>
             <item screen="ddcdit$MlbTeam.browse"/>
             <item screen="ddcdit$BaseballStrength.browse"/>
+            <item screen="ddcdit_MlbPlayerSponsor.browse"/>
         </menu>
         <menu id="sales-example">
             <item screen="ddcdit$Order.browse"/>

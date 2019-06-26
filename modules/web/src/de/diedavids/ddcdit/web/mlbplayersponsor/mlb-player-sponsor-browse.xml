@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<window xmlns="http://schemas.haulmont.com/cuba/screen/window.xsd"
+        caption="msg://browseCaption"
+        focusComponent="mlbPlayerSponsorsTable"
+        messagesPack="de.diedavids.ddcdit.web.mlbplayersponsor">
+    <data readOnly="true">
+        <collection id="mlbPlayerSponsorsDc"
+                    class="de.diedavids.ddcdit.entity.mlb.MlbPlayerSponsor"
+                    view="mlbPlayerSponsor-view">
+            <loader id="mlbPlayerSponsorsDl">
+                <query>
+                    <![CDATA[select e from ddcdit_MlbPlayerSponsor e]]>
+                </query>
+            </loader>
+        </collection>
+    </data>
+    <dialogMode height="600"
+                width="800"/>
+    <layout expand="mlbPlayerSponsorsTable"
+            spacing="true">
+        <filter id="filter"
+                applyTo="mlbPlayerSponsorsTable"
+                dataLoader="mlbPlayerSponsorsDl">
+            <properties include=".*"/>
+        </filter>
+        <groupTable id="mlbPlayerSponsorsTable"
+                    width="100%"
+                    dataContainer="mlbPlayerSponsorsDc">
+            <actions>
+                <action id="create" type="create"/>
+                <action id="edit" type="edit"/>
+                <action id="remove" type="remove"/>
+            </actions>
+            <columns>
+                <column id="sponsorName"/>
+                <column id="sponsoredPlayersFile"/>
+            </columns>
+            <rowsCount/>
+            <buttonsPanel id="buttonsPanel"
+                          alwaysVisible="true">
+                <button id="createBtn" action="mlbPlayerSponsorsTable.create"/>
+                <button id="editBtn" action="mlbPlayerSponsorsTable.edit"/>
+                <button id="removeBtn" action="mlbPlayerSponsorsTable.remove"/>
+            </buttonsPanel>
+        </groupTable>
+        <hbox id="lookupActions" spacing="true" visible="false">
+            <button action="lookupSelectAction"/>
+            <button action="lookupCancelAction"/>
+        </hbox>
+    </layout>
+</window>

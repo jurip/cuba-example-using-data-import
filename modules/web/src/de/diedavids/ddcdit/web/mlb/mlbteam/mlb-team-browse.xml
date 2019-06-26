@@ -48,6 +48,8 @@
                         action="mlbTeamsTable.remove"/>
                 <button id="removeAllBtn"
                         action="mlbTeamsTable.removeAll"/>
+                <button id="importFromFileBtn"
+                        action="mlbTeamsTable.importFromFile"/>
             </buttonsPanel>
         </groupTable>
     </layout>

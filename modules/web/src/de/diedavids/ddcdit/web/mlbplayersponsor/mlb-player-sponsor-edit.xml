@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<window xmlns="http://schemas.haulmont.com/cuba/screen/window.xsd"
+        caption="msg://editorCaption"
+        focusComponent="form"
+        messagesPack="de.diedavids.ddcdit.web.mlbplayersponsor">
+    <data>
+        <instance id="mlbPlayerSponsorDc"
+                  class="de.diedavids.ddcdit.entity.mlb.MlbPlayerSponsor"
+                  view="mlbPlayerSponsor-view">
+            <loader/>
+            <collection id="sponsoredPlayersDc" property="sponsoredPlayers" />
+        </instance>
+    </data>
+    <dialogMode height="600"
+                width="800"/>
+    <layout expand="editActions" spacing="true">
+        <form id="form" dataContainer="mlbPlayerSponsorDc">
+            <column width="250px">
+                <textField id="sponsorNameField" property="sponsorName"/>
+                <upload id="sponsoredPlayersFileField" fileStoragePutMode="IMMEDIATE" property="sponsoredPlayersFile"
+                        showFileName="true"/>
+            </column>
+        </form>
+        <groupBox id="sponsoredPlayersTable" caption="msg://sponsoredPlayers">
+            <table dataContainer="sponsoredPlayersDc" width="100%" height="250px">
+                <columns>
+                    <column id="name" />
+                    <column id="age" />
+                    <column id="annualSalary" />
+                </columns>
+                <rows/>
+            </table>
+        </groupBox>
+        <hbox id="editActions" spacing="true">
+            <button action="windowCommitAndClose"/>
+            <button action="windowClose"/>
+        </hbox>
+    </layout>
+</window>

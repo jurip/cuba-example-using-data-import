@@ -1,20 +1,12 @@
 package de.diedavids.ddcdit.entity.mlb;
 
-import javax.persistence.Entity;
-import javax.persistence.Table;
-import java.util.Date;
-import javax.persistence.Column;
-import javax.persistence.Temporal;
-import javax.persistence.TemporalType;
-import com.haulmont.cuba.core.entity.StandardEntity;
 import com.haulmont.chile.core.annotations.NamePattern;
-import javax.persistence.FetchType;
-import javax.persistence.JoinColumn;
-import javax.persistence.ManyToOne;
+import com.haulmont.cuba.core.entity.StandardEntity;
+
+import javax.persistence.*;
 import java.math.BigDecimal;
+import java.util.Date;
 import java.util.List;
-import javax.persistence.JoinTable;
-import javax.persistence.ManyToMany;
 
 @NamePattern("%s|name")
 @Table(name = "DDCDIT_MLB_PLAYER")
@@ -49,10 +41,22 @@ public class MlbPlayer extends StandardEntity {
     protected BigDecimal annualSalary;
 
     @JoinTable(name = "DDCDIT_MLB_PLAYER_BASEBALL_STRENGTH_LINK",
-        joinColumns = @JoinColumn(name = "MLB_PLAYER_ID"),
-        inverseJoinColumns = @JoinColumn(name = "BASEBALL_STRENGTH_ID"))
+            joinColumns = @JoinColumn(name = "MLB_PLAYER_ID"),
+            inverseJoinColumns = @JoinColumn(name = "BASEBALL_STRENGTH_ID"))
     @ManyToMany
     protected List<BaseballStrength> strengths;
+
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "SPONSOR_ID")
+    protected MlbPlayerSponsor sponsor;
+
+    public MlbPlayerSponsor getSponsor() {
+        return sponsor;
+    }
+
+    public void setSponsor(MlbPlayerSponsor sponsor) {
+        this.sponsor = sponsor;
+    }
 
     public void setStrengths(List<BaseballStrength> strengths) {
         this.strengths = strengths;

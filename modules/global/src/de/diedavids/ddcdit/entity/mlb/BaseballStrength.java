@@ -1,16 +1,14 @@
 package de.diedavids.ddcdit.entity.mlb;
 
-import javax.persistence.Entity;
-import javax.persistence.Table;
-import javax.persistence.Column;
-import javax.validation.constraints.NotNull;
-import com.haulmont.cuba.core.entity.StandardEntity;
 import com.haulmont.chile.core.annotations.NamePattern;
-import java.util.List;
-import javax.persistence.JoinColumn;
-import javax.persistence.JoinTable;
-import javax.persistence.ManyToMany;
+import com.haulmont.cuba.core.entity.StandardEntity;
+import com.haulmont.cuba.core.entity.annotation.PublishEntityChangedEvents;
 
+import javax.persistence.*;
+import javax.validation.constraints.NotNull;
+import java.util.List;
+
+@PublishEntityChangedEvents
 @NamePattern("%s|name")
 @Table(name = "DDCDIT_BASEBALL_STRENGTH")
 @Entity(name = "ddcdit$BaseballStrength")

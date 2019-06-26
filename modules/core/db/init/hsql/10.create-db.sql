@@ -61,6 +61,7 @@ create table DDCDIT_MLB_PLAYER (
     BIRTHDAY date,
     LEFT_HANDED boolean,
     ANNUAL_SALARY decimal(19, 2),
+    SPONSOR_ID varchar(36),
     --
     primary key (ID)
 )^
@@ -145,3 +146,20 @@ create table DDCDIT_MLB_PLAYER_BASEBALL_STRENGTH_LINK (
     primary key (BASEBALL_STRENGTH_ID, MLB_PLAYER_ID)
 )^
 -- end DDCDIT_MLB_PLAYER_BASEBALL_STRENGTH_LINK
+-- begin DDCDIT_MLB_PLAYER_SPONSOR
+create table DDCDIT_MLB_PLAYER_SPONSOR (
+    ID varchar(36) not null,
+    VERSION integer not null,
+    CREATE_TS timestamp,
+    CREATED_BY varchar(50),
+    UPDATE_TS timestamp,
+    UPDATED_BY varchar(50),
+    DELETE_TS timestamp,
+    DELETED_BY varchar(50),
+    --
+    SPONSOR_NAME varchar(255),
+    SPONSORED_PLAYERS_FILE_ID varchar(36) not null,
+    --
+    primary key (ID)
+)^
+-- end DDCDIT_MLB_PLAYER_SPONSOR

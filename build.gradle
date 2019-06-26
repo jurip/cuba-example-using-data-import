@@ -1,6 +1,6 @@
 
 buildscript {
-    ext.cubaVersion = '7.0.1'
+    ext.cubaVersion = '7.0.7'
     repositories {
         
         mavenLocal()
@@ -10,6 +10,9 @@ buildscript {
                 username(rootProject.hasProperty('repoUser') ? rootProject['repoUser'] : 'cuba')
                 password(rootProject.hasProperty('repoPass') ? rootProject['repoPass'] : 'cuba123')
             }
+        }
+        maven {
+            url  "https://dl.bintray.com/mariodavid/cuba-components"
         }
         
     }
@@ -51,11 +54,11 @@ cuba {
 dependencies {
     appComponent("com.haulmont.cuba:cuba-global:$cubaVersion")
     appComponent("de.balvi.cuba.declarativecontrollers:declarativecontrollers-global:0.8.0")
-    appComponent("de.diedavids.cuba.dataimport:dataimport-global:0.8.0-SNAPSHOT")
+    appComponent("de.diedavids.cuba.dataimport:dataimport-global:0.9.0-SNAPSHOT")
 
 }
 
-def hsql = 'org.hsqldb:hsqldb:2.2.9'
+def hsql = 'org.hsqldb:hsqldb:2.4.1'
 
 
 allprojects {
@@ -154,6 +157,9 @@ configure([globalModule, coreModule, guiModule, webModule]) {
         main { groovy { srcDirs = ["src"] } }
         test { groovy { srcDirs = ["test"] } }
     }
+
+    sourceSets.main.output.classesDir = new File(project.buildDir, "classes/main")
+    sourceSets.test.output.classesDir = new File(project.buildDir, "classes/test")
 }
 
 configure(globalModule) {
@@ -164,7 +170,9 @@ configure(globalModule) {
         }
     }
     entitiesEnhancing {
-        main { enabled = true }
+        main { 
+            enabled = true 
+        }
     }
 
     
