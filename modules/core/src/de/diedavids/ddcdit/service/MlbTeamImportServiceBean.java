@@ -1,14 +1,19 @@
 package de.diedavids.ddcdit.service;
 
+import com.google.common.collect.Lists;
 import com.haulmont.cuba.core.entity.FileDescriptor;
+import com.haulmont.cuba.core.global.CommitContext;
 import com.haulmont.cuba.core.global.DataManager;
 import com.haulmont.cuba.core.global.FileStorageException;
 import de.diedavids.cuba.dataimport.DataImportAPI;
 import de.diedavids.cuba.dataimport.entity.ImportConfiguration;
-import de.diedavids.cuba.dataimport.entity.ImportLog;
+import de.diedavids.cuba.dataimport.entity.ImportExecution;
+import de.diedavids.cuba.dataimport.entity.ImportExecutionDetail;
+import de.diedavids.cuba.dataimport.entity.ImportExecutionDetailCategory;
 import org.springframework.stereotype.Service;
 
 import javax.inject.Inject;
+import java.util.List;
 
 @Service(MlbTeamImportService.NAME)
 public class MlbTeamImportServiceBean implements MlbTeamImportService {
@@ -21,21 +26,42 @@ public class MlbTeamImportServiceBean implements MlbTeamImportService {
 
 
     @Override
-    public ImportLog importMlbTeams(FileDescriptor fileDescriptor) {
+    public ImportExecution importMlbTeams(FileDescriptor fileDescriptor) {
         ImportConfiguration importConfiguration = loadImportConfigurationForMlbTeam();
         try {
             return dataImportAPI.importFromFile(importConfiguration, fileDescriptor);
         } catch (FileStorageException e) {
             e.printStackTrace();
-            return createFailedImportLog(importConfiguration);
+            return createFailedImportExecution(importConfiguration);
         }
     }
 
-    private ImportLog createFailedImportLog(ImportConfiguration importConfiguration) {
-        ImportLog importLog = dataManager.create(ImportLog.class);
-        importLog.setConfiguration(importConfiguration);
-        importLog.setSuccess(false);
-        return importLog;
+    private ImportExecution createFailedImportExecution(ImportConfiguration importConfiguration) {
+
+        ImportExecution importExecution = dataManager.create(ImportExecution.class);
+        importExecution.setConfiguration(importConfiguration);
+        importExecution.setSuccess(false);
+
+        List<ImportExecutionDetail> executionDetails = Lists.newArrayList();
+
+        ImportExecutionDetail errorDetail = dataManager.create(ImportExecutionDetail.class);
+
+        errorDetail.setCategory(ImportExecutionDetailCategory.PERSISTENCE);
+        errorDetail.setImportExecution(importExecution);
+        errorDetail.setMessage("Failed to open file");
+
+
+        executionDetails.add(errorDetail);
+
+        importExecution.setDetails(executionDetails);
+
+        CommitContext commitContext = new CommitContext();
+        commitContext.addInstanceToCommit(importExecution);
+        commitContext.addInstanceToCommit(errorDetail);
+
+        dataManager.commit(commitContext);
+
+        return importExecution;
     }
 
     private ImportConfiguration loadImportConfigurationForMlbTeam() {

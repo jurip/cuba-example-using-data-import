@@ -3,6 +3,7 @@ package de.diedavids.ddcdit.entity.mlb;
 import com.haulmont.chile.core.annotations.NamePattern;
 import com.haulmont.cuba.core.entity.FileDescriptor;
 import com.haulmont.cuba.core.entity.StandardEntity;
+import com.haulmont.cuba.core.entity.annotation.PublishEntityChangedEvents;
 
 import javax.persistence.*;
 import javax.validation.constraints.NotNull;
@@ -11,6 +12,7 @@ import java.util.List;
 @NamePattern("%s|sponsorName")
 @Table(name = "DDCDIT_MLB_PLAYER_SPONSOR")
 @Entity(name = "ddcdit_MlbPlayerSponsor")
+@PublishEntityChangedEvents
 public class MlbPlayerSponsor extends StandardEntity {
     private static final long serialVersionUID = 7927892719740451637L;
 
