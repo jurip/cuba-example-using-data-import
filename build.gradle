@@ -1,6 +1,6 @@
 
 buildscript {
-    ext.cubaVersion = '7.0.7'
+    ext.cubaVersion = '7.0.8'
     repositories {
         
         mavenLocal()
@@ -54,7 +54,7 @@ cuba {
 dependencies {
     appComponent("com.haulmont.cuba:cuba-global:$cubaVersion")
     appComponent("de.balvi.cuba.declarativecontrollers:declarativecontrollers-global:0.8.0")
-    appComponent("de.diedavids.cuba.dataimport:dataimport-global:0.9.0-SNAPSHOT")
+    appComponent("de.diedavids.cuba.dataimport:dataimport-global:0.9.0")
 
 }
 
