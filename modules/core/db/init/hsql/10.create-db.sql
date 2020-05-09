@@ -163,3 +163,20 @@ create table DDCDIT_MLB_PLAYER_SPONSOR (
     primary key (ID)
 )^
 -- end DDCDIT_MLB_PLAYER_SPONSOR
+-- begin DDCDIT_DATATYPE_EXAMPLE
+create table DDCDIT_DATATYPE_EXAMPLE (
+    ID varchar(36) not null,
+    VERSION integer not null,
+    CREATE_TS timestamp,
+    CREATED_BY varchar(50),
+    UPDATE_TS timestamp,
+    UPDATED_BY varchar(50),
+    DELETE_TS timestamp,
+    DELETED_BY varchar(50),
+    --
+    LOCAL_DATE_TIME timestamp,
+    STRING_TYPE varchar(255),
+    --
+    primary key (ID)
+)^
+-- end DDCDIT_DATATYPE_EXAMPLE

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<window xmlns="http://schemas.haulmont.com/cuba/screen/window.xsd"
+        caption="msg://editorCaption"
+        focusComponent="form"
+        messagesPack="de.diedavids.ddcdit.web.screens.datatypeexample">
+    <data>
+        <instance id="datatypeExampleDc"
+                  class="de.diedavids.ddcdit.entity.DatatypeExample"
+                  view="_local">
+            <loader/>
+        </instance>
+    </data>
+    <dialogMode height="600"
+                width="800"/>
+    <layout expand="editActions" spacing="true">
+        <form id="form" dataContainer="datatypeExampleDc">
+            <column width="250px">
+                <dateField id="localDateTimeTypeField" property="localDateTimeType"/>
+                <textField id="stringTypeField" property="stringType"/>
+            </column>
+        </form>
+        <hbox id="editActions" spacing="true">
+            <button action="windowCommitAndClose"/>
+            <button action="windowClose"/>
+        </hbox>
+    </layout>
+</window>

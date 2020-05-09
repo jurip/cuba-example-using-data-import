@@ -14,5 +14,6 @@
             <item screen="ddcdit$Product.browse"/>
             <item screen="ddcdit$ProductCategory.browse"/>
         </menu>
+        <item screen="ddcdit_DatatypeExample.browse"/>
     </menu>
 </menu-config>

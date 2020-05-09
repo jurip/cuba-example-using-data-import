@@ -11,5 +11,6 @@
         <class>de.diedavids.ddcdit.entity.sales.ProductCategory</class>
         <class>de.diedavids.ddcdit.entity.mlb.BaseballStrength</class>
         <class>de.diedavids.ddcdit.entity.mlb.MlbPlayerSponsor</class>
+        <class>de.diedavids.ddcdit.entity.DatatypeExample</class>
     </persistence-unit>
 </persistence>
