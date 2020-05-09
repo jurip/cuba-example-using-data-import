@@ -1,0 +1,39 @@
+[
+  {
+    "_entityName": "ddcdi$ImportAttributeMapper",
+    "id": "4b696279-d25d-2196-c5be-61fd5289513c",
+    "fileColumnAlias": "StringType",
+    "configuration": {
+      "_entityName": "ddcdi$ImportConfiguration",
+      "id": "bb8b71f1-1bb0-a25a-26eb-2df1e9cd455a",
+      "version": 6,
+      "name": "Datatype Example: LocalDateTime"
+    },
+    "version": 1,
+    "fileColumnNumber": 1,
+    "mapperMode": "AUTOMATIC",
+    "entityAttribute": "stringType",
+    "createdBy": "admin",
+    "attributeType": "DIRECT_ATTRIBUTE",
+    "createTs": "2020-05-09 08:13:13.894",
+    "updateTs": "2020-05-09 08:13:13.894"
+  },
+  {
+    "_entityName": "ddcdi$ImportAttributeMapper",
+    "id": "afa01949-427d-c027-037c-088ba68c3c14",
+    "fileColumnAlias": "LocalDateTimeType",
+    "updatedBy": "admin",
+    "configuration": {
+      "_entityName": "ddcdi$ImportConfiguration",
+      "id": "bb8b71f1-1bb0-a25a-26eb-2df1e9cd455a"
+    },
+    "version": 5,
+    "fileColumnNumber": 0,
+    "mapperMode": "CUSTOM",
+    "entityAttribute": "localDateTimeType",
+    "createdBy": "admin",
+    "customAttributeBindScript": "import java.time.LocalDateTime;\nimport java.time.format.DateTimeFormatter;\n\nreturn LocalDateTime.parse(\n    rawValue, \n    DateTimeFormatter.ofPattern(\"yyyy-MM-dd HH:mm\")\n)",
+    "createTs": "2020-05-09 08:16:59.714",
+    "updateTs": "2020-05-09 08:35:18.513"
+  }
+]

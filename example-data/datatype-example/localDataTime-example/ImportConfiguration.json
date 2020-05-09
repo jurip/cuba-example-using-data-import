@@ -1,0 +1,26 @@
+[
+  {
+    "_entityName": "ddcdi$ImportConfiguration",
+    "id": "bb8b71f1-1bb0-a25a-26eb-2df1e9cd455a",
+    "transactionStrategy": "SINGLE_TRANSACTION",
+    "template": {
+      "_entityName": "sys$FileDescriptor",
+      "id": "399cd2a1-48cb-6b26-234d-404745a8eddd",
+      "extension": "csv",
+      "version": 1,
+      "name": "datatype-example.csv",
+      "createDate": "2020-05-09 08:13:12.738"
+    },
+    "updatedBy": "admin",
+    "entityClass": "ddcdit_DatatypeExample",
+    "dateFormat": "dd/MM/yyyy",
+    "booleanFalseValue": "False",
+    "fileCharset": "UTF-8",
+    "version": 6,
+    "createdBy": "admin",
+    "booleanTrueValue": "True",
+    "name": "Datatype Example: LocalDateTime",
+    "createTs": "2020-05-09 08:13:13.894",
+    "updateTs": "2020-05-09 08:35:18.513"
+  }
+]
